@@ -1,0 +1,17 @@
+CREATE TABLE `students` (
+    `id` INT(10) NOT NULL,
+    `firstName` VARCHAR(300) NOT NULL,
+    `lastName` VARCHAR(300) NOT NULL,
+    `email` VARCHAR(300) NOT NULL,
+    `phone` VARCHAR(12) NOT NULL,
+    `address` VARCHAR(300) NOT NULL,
+    `createdAT` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+ALTER TABLE `students`
+ADD PRIMARY KEY(`id`);
+
+ALTER TABLE `students`
+MODIFY `id` INT(10) NOT NULL AUTO_INCREMENT;
+
+COMMIT;
